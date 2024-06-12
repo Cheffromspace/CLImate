@@ -33,9 +33,9 @@ CLImate is a Command Line Interface for Collaborative Language Interaction with 
 4. Set up the Anthropic API key:
    - Sign up for an Anthropic API key at [https://www.anthropic.com](https://www.anthropic.com)
    - Set the `ANTHROPIC_API_KEY` environment variable with your API key:
-  ```
-  export ANTHROPIC_API_KEY=your_api_key_here
-  ```
+     ```
+     export ANTHROPIC_API_KEY=your_api_key_here
+     ```
 
 ## Usage
 
