@@ -9,7 +9,7 @@ CLImate is a Command Line Interface for Collaborative Language Interaction with 
 - Customizable AI personas for different conversation styles
 - Conversation history management (save, load, reset)
 - Importing and exporting conversation files
-- Formatted output for improved readability
+- Formatted output and syntax hilighting for improved readability
 
 ![image](https://github.com/Cheffromspace/CLImate/assets/21370528/a4a626e1-e461-4a68-8767-75752a92a868)
 
