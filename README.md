@@ -5,8 +5,7 @@ CLImate is a Command Line Interface for Collaborative Language Interaction with 
 ## Features
 
 - Interactive chat mode for real-time conversations with the AI
-- Support for different AI models and temperature settings
-   - Currently only the Anthropic models are supported
+- Support for different AI models and temperature settings (Currently only Anthropic's Claude models are supported)
 - Customizable AI personas for different conversation styles
 - Conversation history management (save, load, reset)
 - Importing and exporting conversation files
