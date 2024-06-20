@@ -34,9 +34,15 @@ def format_assistant_message(message):
                 # End of code block
                 code_block = "\n".join(code_block_lines)
                 syntax = Syntax(
-                    code_block, language, line_numbers=False, word_wrap=True
+                    code_block,
+                    language,
+                    line_numbers=False,
+                    word_wrap=True,
+                    background_color="default",  # Set background color to default
                 )
+                formatted_lines.append("```\n")  # Add opening backticks
                 formatted_lines.append(syntax)
+                formatted_lines.append("```")  # Add closing backticks
                 code_block_lines = []
                 in_code_block = False
             else:
@@ -59,13 +65,16 @@ def format_assistant_message(message):
                         formatted_line.append(part)
                     else:
                         formatted_line.append(Text(part, style="bold yellow"))
-                formatted_line.append(
-                    "\n"
-                )  # Add a line break after each formatted line
                 formatted_lines.append(formatted_line)
-    console.print()
+                formatted_lines.append("\n")  # Add a newline after each line of text
+
     console.print("Assistant:", style=assistant_style)
-    console.print(*formatted_lines, style=assistant_style, highlight=False)
+    for line in formatted_lines:
+        if isinstance(line, Syntax):
+            console.print(line, style=assistant_style)
+        else:
+            console.print(line, style=assistant_style, end="")
+    console.print()  # Add a newline at the end
 
 
 def format_conversation_title(title):
